@@ -1038,7 +1038,8 @@ Once you have created a cookie, you can add it to a new or existing
 You should use the ``withCookie()`` method to add cookies to ``Response``
 objects as it is simpler to use::
 
-    $response = $this->response->withCookie($cookie);
+    // Immutable Response
+    $this->response = $this->response->withCookie($cookie);
 
 Cookies set to responses can be encrypted using the
 :ref:`encrypted-cookie-middleware`.
